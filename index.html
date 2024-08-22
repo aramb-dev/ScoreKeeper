@@ -5,66 +5,72 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Score Keeper</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
-    <style>
-        .card-footer-item {
-            flex-grow: 1;
-        }
-    </style>
+    <link rel="stylesheet" href="./assets/css/bulma.css" />
 </head>
 
 <body>
     <section class="section">
         <div class="container">
-            <div class="columns is-centered">
-                <div class="column is-half">
-                    <div class="card">
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter">
+                    <article class="card">
                         <header class="card-header">
-                            <p class="card-header-title">Ping Pong Score Keeper</p>
+                            <p
+                                class="card-header-title is-centered is-size-3-desktop is-size-5-tablet is-size-6-mobile">
+                                Ping Pong Score Keeper</p>
                         </header>
-                        <div class="card-content">
+                        <figure class="card-image is-2by1">
+                            <img src="./assets/img/ping-pong.jpg" alt="Ping Pong Table" />
+                        </figure>
+                        <main class="card-content">
                             <div class="content">
-                                <h1 class="title is-1">
-                                    <span id="p1Display">0</span> to
-                                    <span id="p2Display">0</span>
-                                </h1>
-                                <p class="subtitle">Use the buttons below to keep score</p>
-
-                                <div class="field is-grouped">
-                                    <label for="playto" class="label is-large is-inline">Playing To</label>
-                                    <div class="control">
-                                        <input class="input is-medium is-inline" type="number" value="3" id="playto" step="1" min="1" />
+                                <div class="is-flex is-justify-content-space-around">
+                                    <div class="p1-container">
+                                        <h2 class="subtitle is-5">Player 1</h2>
+                                        <h1 class="title is-1 mt-auto pt-2">
+                                            <span id="p1Display">0</span>
+                                        </h1>
+                                    </div>
+                                    <div class="p2-container">
+                                        <h2 class="subtitle is-5">Player 2</h2>
+                                        <h1 class="title is-1 pt-2 mt-auto">
+                                            <span id="p2Display">0</span>
+                                        </h1>
                                     </div>
                                 </div>
+                                <p class="subtitle">Use the buttons below to keep score</p>
+                                <label for="playto" class="label is-large is-inline">Playing To</label>
+                                <div class="field is-large is-inline">
+                                    <input class="input is-medium is-inline" type="text" value="3" id="playto" />
+                                </div>
+                                <div class="buttons pt-5"><button id="p1Button" class="is-primary button card-footer-item is-large">
+                                    +1 Player One
+                                </button>
+                                <button id="p2Button" class="is-info button card-footer-item is-large">
+                                    +1 Player Two
+                                </button>
+                                <button id="reset" class="is-danger button card-footer-item is-large">
+                                    Reset
+                                </button></div>
                             </div>
-                        </div>
-                        <footer class="card-footer">
-                            <button id="p1Button" class="button is-primary is-fullwidth is-large">
-                                +1 Player One
-                            </button>
-                            <button id="p2Button" class="button is-info is-fullwidth is-large">
-                                +1 Player Two
-                            </button>
-                            <button id="reset" class="button is-danger is-fullwidth is-large">
-                                Reset
-                            </button>
-                        </footer>
-                    </div>
+                        </main>
+                    </article>
                 </div>
             </div>
         </div>
     </section>
 
-    <script src="app.js"></script>
-
-    <footer class="footer">
+    <footer class="footer mt-auto">
         <div class="content has-text-centered">
             <p>
-                <strong>Ping Pong Score Keeper
-                </strong> by <a href="https://github.com/aramb-dev">Abdūr-Rahmān Bilāl</a>.
+                <strong>Ping Pong Score Keeper</strong> by <a href="https://github.com/aramb-dev">Abdūr-Rahmān
+                    Bilāl</a>.
             </p>
         </div>
     </footer>
+
+    <!-- JavaScript file -->
+    <script src="app.js"></script>
 </body>
 
 </html>
